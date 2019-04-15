@@ -1,4 +1,4 @@
-package com.khh.demo;
+package com.khh.tools;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
