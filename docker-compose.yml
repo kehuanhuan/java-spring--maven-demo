@@ -4,11 +4,25 @@ services:
   server:
     image: java
     ports:
-      - 8081:8080
+      - 8081:8081
     working_dir: /var/www
     volumes:
       - ./:/var/www
+    command: java -jar /var/www/spring-demo/target/khhcom-demo-0.0.1.jar
     tty: true
+
+  # mysql 数据库服务
+  mysql:
+    image: mysql:5.7
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: springdemo
+      MYSQL_USER: springdemo
+      MYSQL_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3308:3306"
 
 networks:
   default:
