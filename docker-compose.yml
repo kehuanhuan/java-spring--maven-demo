@@ -4,11 +4,7 @@ services:
   server:
     image: java
     ports:
-<<<<<<< HEAD
       - 8081:8081
-=======
-      - 8089:8080
->>>>>>> 96a4fb4fceb173142b20b4ec26668f87d833dca6
     working_dir: /var/www
     volumes:
       - ./:/var/www
